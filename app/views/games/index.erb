@@ -1,0 +1,28 @@
+<h1>Current Games <h1>
+<table>
+	<tr>
+		<th>Game #</th>
+		<th>Game Name</th>
+	<tr>
+<% @games.each do |game| %>
+	<tr>		
+		<td><%= game.id %></td>
+		<td><%= game.gamename %></td>
+	</tr>
+<% end %>
+</table>
+	
+			
+	
+<h1>Start a New Game</h1>
+
+<%= form_for(@game) do |f| %>
+	<%= render 'shared/error_messages', :object => f.object %>
+	<div class="field">
+		<%= f.label :gamename %><br />
+		<%= f.text_field :gamename %>
+	</div>
+	<div class="actions">
+		<%= f.submit "Start New Game" %>
+	</div>
+<% end %>

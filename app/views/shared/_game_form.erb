@@ -1,0 +1,12 @@
+<% @user ||= current_user %>
+<div class="stats">
+	<table summary="Game stats">
+		<tr>
+			<td>
+					<span id="following" class="stat">
+						<%= @user.games.count %> games
+					</span>
+			</td>
+		</tr>
+	</table>
+</div>
