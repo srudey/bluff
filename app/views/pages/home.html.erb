@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<title>Blufferdoodle! | Home</title>
+  </head>
+  <body>
+	<h1>Blufferdoodle Game!</h1>
+	<p>This is the blufferdoodle game!</p>
+	<% if !signed_in? %>
+	<%= link_to "Sign up!", signup_path %>
+	<% end %>
+  </body>
+</html>
